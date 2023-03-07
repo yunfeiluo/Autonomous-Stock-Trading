@@ -8,5 +8,5 @@ We showed that before 2021, the three reinforcement methods we have tried always
 ---
 
 ### Main file
-- run.py is the main file for running the training and testing pipeline with methods of deep q-learning, deep SARSA, and policy gradient. 
+- run.py is the main file for running the training and testing pipeline with methods of deep q-learning, deep SARSA, and policy gradient. Un-comment the plot scripts to produce the figures of interest. 
 - The stock that is used for running the pipeline can be set in data_preprocessing.py
