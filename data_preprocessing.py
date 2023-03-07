@@ -7,6 +7,23 @@ import pandas as pd
 import yfinance as yf
 import pendulum
 
+# # store the data used in experiments
+# import pickle
+# from tqdm import tqdm
+
+# stored_data = dict()
+# for stock in tqdm(['GOOG', "AAPL", "TSLA", "META", "MSFT", "IBM"]):
+#     good = yf.Ticker(stock).history(start="2012-11-30", end="2020-12-31", interval='1d', actions=False)
+#     bad = yf.Ticker(stock).history(start="2012-11-30", end="2022-12-02", interval='1d', actions=False)
+#     stored_data[stock] = {
+#         'good': good,
+#         'bad': bad
+#     }
+
+# with open("stored_data.pkl", 'wb') as f:
+#     pickle.dump(stored_data, f)
+# exit()
+
 # fetch history series
 stock = 'GOOG' # TSLA, AAPL, GOOG, META, MSFT, AMZN, DIS, IBM etc
 # price_history = yf.Ticker(stock).history(period='10y', # valid periods: 1d,5d,1mo,3mo,6mo,1y,2y,5y,10y,ytd,max

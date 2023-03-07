@@ -14,7 +14,7 @@ if __name__ == '__main__':
     # Train Deep Q-Learning for 20 times
     profits = list()
     curves = list()
-    for i in range(2):
+    for i in range(20):
         pi_deep, qsa, learning_curve = train_deep_q(verbose=False)
         profits.append(interact_test(pi_deep, series_name='test', verbose=False))
         curves.append(learning_curve)
@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # final_profit_policy_grad = interact_test(pi_policy_grad, series_name='test', verbose=True)
 
     profits = list()
-    for i in range(2):
+    for i in range(20):
         pi_pg, rpg = train_policy_gradient(verbose=False)
         profits.append(interact_test(pi_pg, series_name='test', verbose=False))
         print(i, 'Final Profit', profits[-1])
@@ -44,7 +44,7 @@ if __name__ == '__main__':
     # final_profit_sarsa = interact_test(pi_deep_sarsa, series_name='test', verbose=True)
 
     profits_sarsa = list()
-    for i in range(2):
+    for i in range(20):
         pi_deep_sarsa, qsa_sarsa = train_deep_sarsa(verbose=False, sarsa=True)
         profits_sarsa.append(interact_test(pi_deep_sarsa, series_name='test', verbose=False))
         print(i, 'Final Profit', profits_sarsa[-1])
